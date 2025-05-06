@@ -1,0 +1,48 @@
+/* Graphik-30 - latin */
+@font-face {
+  font-weight: 300;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-display: fallback;
+  src: url('../fonts/Graphik-Font-Family/GraphikLight.otf'); /* IE9 Compat Modes */
+}
+/* Graphik-400 - latin */
+@font-face {
+  font-weight: 400;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-display: fallback;
+  src: url('../fonts/Graphik-Font-Family/GraphikRegular.otf'); /* IE9 Compat Modes */
+}
+/* Graphik-500 - latin */
+@font-face {
+  font-weight: 500;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-display: fallback;
+  src: url('../fonts/Graphik-Font-Family/GraphikSemibold.otf'); /* IE9 Compat Modes */
+}
+/* Graphik-600 - latin */
+@font-face {
+  font-weight: 600;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-display: fallback;
+  src: url('../fonts/Graphik-Font-Family/GraphikBold.otf'); /* IE9 Compat Modes */
+}
+/* Graphik-700 - latin */
+@font-face {
+  font-weight: 700;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-display: fallback;
+  src: url('../fonts/Graphik-Font-Family/GraphikBlack.otf'); /* IE9 Compat Modes */
+}
+/* Graphik-900 - latin */
+@font-face {
+  font-weight: 900;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-display: fallback;
+  src: url('../fonts/Graphik-Font-Family/GraphikSuper.otf'); /* IE9 Compat Modes */
+}

@@ -1,0 +1,52 @@
+@import "src/styles/scaffold";
+
+.infocard__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+
+  &:hover {
+    border-color: var(--fs-color-theme-4);
+
+    .infocard__text {
+      color: var(--fs-color-neutral-0);
+      background-color: var(--fs-color-theme-4);
+    }
+  }
+}
+
+.infocard__text {
+  position: absolute;
+  bottom: 30px;
+  max-width: 150px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--fs-color-theme-4);
+  text-align: center;
+  pointer-events: none;
+  background-color: var(--fs-color-neutral-0);
+  border-radius: 0.5rem;
+}
+
+.infocard__img {
+  border-radius: 0.5rem;
+}
+
+.classSection__brand {
+  align-items: center;
+  width: 204px;
+  height: 128px;
+  background-color: #fafafa;
+
+  .infocard__container {
+    border-radius: 0;
+  }
+
+  &:hover {
+    background-color: #ffffff;
+  }
+}

@@ -1,0 +1,14 @@
+.fs-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  [data-fs-logo-icon] {
+    width: 95px;
+    height: 25px;
+    background-image: url("~/public/logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

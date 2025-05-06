@@ -1,0 +1,99 @@
+@import "src/styles/scaffold";
+
+.fs-newsletter {
+  // --------------------------------------------------------
+  // Design Tokens for Newsletter
+  // --------------------------------------------------------
+
+  // Default properties
+  --fs-newsletter-padding:
+    var(--fs-spacing-4) var(--fs-spacing-1)
+    var(--fs-spacing-5) var(--fs-spacing-1);
+  --fs-newsletter-bkg: var(--fs-color-primary-bkg);
+  --fs-newsletter-text-color: var(--fs-color-text-inverse);
+
+  // Title
+  --fs-newsletter-title-size: var(--fs-text-size-title-section);
+  --fs-newsletter-title-weight: var(--fs-text-weight-bold);
+
+  // Card
+  --fs-newsletter-card-border-radius: var(--fs-border-radius);
+
+  // --------------------------------------------------------
+  // Structural Styles
+  // --------------------------------------------------------
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f2f2f2;
+
+  [data-fs-newsletter] {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  [data-fs-newsletter-form] {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.25rem 2rem;
+    background-color: #f2f2f2;
+
+    @media (max-width: 1279px) {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+
+  [data-fs-newsletter-header] {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    color: var(--fs-color-theme-3);
+
+    @media (max-width: 1279px) {
+      padding-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  [data-fs-newsletter-controls] {
+    display: flex;
+    background-color: #ffffff;
+    border: 4px solid var(--fs-color-theme-3);
+    border-radius: 0.5rem;
+
+    input {
+      width: 36vw;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--fs-color-theme-5);
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      @media (max-width: 1279px) {
+        width: 100%;
+      }
+    }
+
+    button {
+      font-weight: 700;
+      color: #fafafa;
+      background-color: var(--fs-color-theme-4);
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

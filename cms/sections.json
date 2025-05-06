@@ -1,0 +1,561 @@
+[
+  {
+    "name": "Fold",
+    "schema": {
+      "title": "Fold",
+      "description": "Components below this will be loaded as the user scrolls",
+      "type": "null"
+    }
+  },
+  {
+    "name": "Banners",
+    "schema": {
+      "title": "Main banner",
+      "description": "Main banner slider",
+      "type": "object",
+      "properties": {
+        "banners": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "title": "Image",
+            "properties": {
+              "src": {
+                "title": "Image",
+                "description": "Image",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "href": {
+                "title": "URL address",
+                "type": "string"
+              },
+              "alt": {
+                "title": "Image description",
+                "description": "Image description for accessibility",
+                "type": "string"
+              },
+              "title": {
+                "type": "string",
+                "title": "Banner Title"
+              },
+              "subTitle": {
+                "type": "string",
+                "title": "Banner subtitle"
+              },
+              "buttonText": {
+                "type": "string",
+                "title": "Banner button"
+              },
+              "color": {
+                "type": "string",
+                "title": "Color Text",
+                "description": "Hexadecimal color"
+              },
+              "height": {
+                "title": "Image Height",
+                "description": "Set a Height",
+                "type": "number"
+              }
+            },
+            "required": ["src", "height"]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "ImageBanner",
+    "schema": {
+      "title": "Image Banner",
+      "description": "a image fullscreen",
+      "type": "object",
+      "properties": {
+        "src": {
+          "title": "Image",
+          "description": "Image",
+          "type": "string",
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        },
+        "alt": {
+          "title": "Image description",
+          "description": "Image description for accessibility",
+          "type": "string"
+        },
+        "fullWidth": {
+          "default": false,
+          "type": "boolean",
+          "title": "Full Width"
+        },
+        "height": {
+          "title": "Image Height",
+          "description": "Set a Height",
+          "type": "number"
+        }
+      },
+      "required": ["height"]
+    }
+  },
+  {
+    "name": "PromotionBanner",
+    "schema": {
+      "title": "PromotionBanner",
+      "description": "Banner with background image and text and link",
+      "type": "object",
+      "properties": {
+        "src": {
+          "title": "Image",
+          "description": "Image",
+          "type": "string",
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        },
+        "title": {
+          "title": "Banner Text",
+          "description": "set a title text",
+          "type": "string"
+        },
+        "linkText": {
+          "title": "Button Text",
+          "description": "set a button text",
+          "type": "string"
+        },
+        "href": {
+          "title": "URL",
+          "description": "set a URL href",
+          "type": "string"
+        }
+      }
+    }
+  },
+  {
+    "name": "BlogSection",
+    "schema": {
+      "title": "BlogSection",
+      "description": "A BlogSection with image,text and link button",
+      "type": "object",
+      "properties": {
+        "allItems": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "title": "Card",
+            "type": "object",
+            "properties": {
+              "src": {
+                "title": "Image",
+                "description": "Image",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "alt": {
+                "title": "Image alt Text",
+                "description": "Set a alt text for the image",
+                "type": "string"
+              },
+              "primaryText": {
+                "title": "Primary Text",
+                "description": "Set a Primary text",
+                "type": "string"
+              },
+              "secondaryText": {
+                "title": "Image secondaryText",
+                "description": "Set a secondary text",
+                "type": "string"
+              },
+              "btnText": {
+                "title": "Image Button Text",
+                "description": "Set a Button Text",
+                "type": "string"
+              },
+              "btnHref": {
+                "title": "Image Button Href",
+                "description": "Set a Button Href",
+                "type": "string"
+              },
+              "width": {
+                "title": "Image Width",
+                "description": "Set a Width",
+                "type": "number"
+              },
+              "height": {
+                "title": "Image Height",
+                "description": "Set a Height",
+                "type": "number"
+              }
+            },
+            "required": ["height", "width"]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "ProductShelf",
+    "schema": {
+      "title": "Shelf",
+      "description": "Collection shelf",
+      "type": "object",
+      "properties": {
+        "productClusterIds": {
+          "type": "string",
+          "title": "Collection ID"
+        },
+        "shelfType": {
+          "type": "string",
+          "default": "isCarousel",
+          "title": "Display as",
+          "enum": ["isCarousel", "isRowLayout"],
+          "enumNames": ["Carousel", "Row"]
+        },
+        "size": {
+          "type": "string",
+          "title": "Card size",
+          "description": "This field only works on Carousel Shelf",
+          "enum": ["big", "small"],
+          "enumNames": ["Big", "Small"],
+          "default": "Small"
+        },
+        "itens": {
+          "type": "number",
+          "title": "Number of products that will be display per page"
+        },
+        "first": {
+          "type": "number",
+          "title": "Total of products that will be display"
+        },
+        "isSimpleCard": {
+          "default": false,
+          "type": "boolean",
+          "title": "Display as simple card",
+          "description": "Show only product name, image and price"
+        },
+        "otherBackground": {
+          "default": false,
+          "type": "boolean",
+          "title": "other background"
+        }
+      }
+    }
+  },
+  {
+    "name": "Title",
+    "schema": {
+      "title": "Section Title",
+      "description": "Section title",
+      "type": "object",
+      "properties": {
+        "titleSection": {
+          "type": "string",
+          "title": "Title"
+        },
+        "linkText": {
+          "type": "string",
+          "title": "Link name"
+        },
+        "link": {
+          "type": "string",
+          "title": "URL"
+        },
+        "border": {
+          "default": false,
+          "type": "boolean",
+          "title": "border"
+        },
+        "otherBackground": {
+          "default": false,
+          "type": "boolean",
+          "title": "other background"
+        }
+      }
+    }
+  },
+  {
+    "name": "HeaderLink",
+    "schema": {
+      "title": "Header Link",
+      "description": "Define links",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Link name"
+        },
+        "link": {
+          "type": "string",
+          "title": "URL"
+        }
+      },
+      "required": ["link"]
+    }
+  },
+  {
+    "name": "IncentivesHeader",
+    "schema": {
+      "title": "Incentives Header",
+      "description": "Incentives Slider for home",
+      "type": "object",
+      "properties": {
+        "incentives": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "title": "Card",
+            "type": "object",
+            "properties": {
+              "src": {
+                "title": "Image",
+                "description": "Image",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "alt": {
+                "title": "Image alt Text",
+                "description": "Set a alt text for the image",
+                "type": "string"
+              },
+              "title": {
+                "title": "Title text",
+                "description": "Set a Title",
+                "type": "string"
+              },
+              "primaryText": {
+                "title": "Primary Text",
+                "description": "Set a Primary text",
+                "type": "string"
+              },
+              "secondaryText": {
+                "title": "Image secondaryText",
+                "description": "Set a secondary text",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "CategorySection",
+    "schema": {
+      "title": "Category Section",
+      "description": "Category Section for home",
+      "type": "object",
+      "properties": {
+        "allItems": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "title": "Info Card",
+            "type": "object",
+            "properties": {
+              "src": {
+                "title": "Image",
+                "description": "Image",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "alt": {
+                "title": "Image alt Text",
+                "description": "Set a alt text for the image",
+                "type": "string"
+              },
+              "text": {
+                "title": "Info Card Text",
+                "description": "Set a Text",
+                "type": "string"
+              },
+              "width": {
+                "title": "Image Width",
+                "description": "Set a Width",
+                "type": "number"
+              },
+              "height": {
+                "title": "Image Height",
+                "description": "Set a Height",
+                "type": "number"
+              },
+              "href": {
+                "title": "Href Link",
+                "description": "Set a URL",
+                "type": "string"
+              }
+            },
+            "required": ["href", "width", "height"]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "BrandSection",
+    "schema": {
+      "title": "Brand Section",
+      "description": "Brand Section for home",
+      "type": "object",
+      "properties": {
+        "allItems": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "title": "Info Card",
+            "type": "object",
+            "properties": {
+              "src": {
+                "title": "Image",
+                "description": "Image",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "alt": {
+                "title": "Image alt Text",
+                "description": "Set a alt text for the image",
+                "type": "string"
+              },
+              "href": {
+                "title": "Href Link",
+                "description": "Set a URL",
+                "type": "string"
+              },
+              "width": {
+                "title": "Image Width",
+                "description": "Set a Width",
+                "type": "number"
+              },
+              "height": {
+                "title": "Image Height",
+                "description": "Set a Height",
+                "type": "number"
+              }
+            },
+            "required": ["height", "width", "href"]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "CategoryImage",
+    "schema": {
+      "title": "Category Image",
+      "description": "Category image for PLP",
+      "type": "object",
+      "properties": {
+        "department": {
+          "title": "Department",
+          "description": "Department name",
+          "type": "string"
+        },
+        "allItems": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "title": "Category",
+            "type": "object",
+            "properties": {
+              "src": {
+                "title": "Image",
+                "description": "Image",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "alt": {
+                "title": "Image alt Text",
+                "description": "Set a alt text for the image",
+                "type": "string"
+              },
+              "category": {
+                "title": "Category",
+                "description": "Category name",
+                "type": "string"
+              }
+            }
+          },
+          "required": ["department"]
+        }
+      }
+    }
+  },
+  {
+    "name": "Newsletter",
+    "schema": {
+      "title": "Newsletter",
+      "description": "Allow users to subscribe to your updates",
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        }
+      }
+    }
+  },
+  {
+    "name": "CrossSellingShelf",
+    "schema": {
+      "title": "Cross Selling Shelf",
+      "description": "Add cross selling product data to your users",
+      "type": "object",
+      "required": ["title", "items", "kind"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "items": {
+          "type": "integer",
+          "title": "First",
+          "default": 5,
+          "description": "Number of items to display"
+        },
+        "kind": {
+          "title": "Kind",
+          "description": "Change cross selling types",
+          "default": "buy",
+          "enum": ["buy", "view"],
+          "enumNames": ["Who bought also bought", "Who saw also saw"]
+        }
+      }
+    }
+  },
+  {
+    "name": "BannerNewsletter",
+    "schema": {
+      "title": "Banner Newsletter",
+      "description": "Add newsletter with a banner",
+      "type": "object",
+      "required": [],
+      "properties": {}
+    }
+  },
+  {
+    "name": "ProductDetails",
+    "schema": {
+      "title": "Product Details",
+      "description": "Display product gallery with buy button and shipping",
+      "type": "object",
+      "properties": {}
+    }
+  }
+]

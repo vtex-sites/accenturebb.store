@@ -1,0 +1,142 @@
+@import "src/styles/scaffold";
+
+[data-fs-product-shipping] {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+
+  [data-fs-sr-only] {
+    display: none;
+  }
+
+  [data-fs-product-shipping-img] {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    max-width: 64px;
+    height: 64px;
+    padding-top: 5px;
+    margin-right: 1rem;
+    background-color: var(--fs-color-theme-2);
+    border-radius: 50%;
+  }
+
+  [data-fs-product-shipping-container] {
+    display: flex;
+    align-items: center;
+  }
+
+  [data-fs-product-shipping-content] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  [data-fs-product-shipping-input] {
+    width: 100%;
+
+    [data-fs-input-text-actionable="true"] {
+      min-width: 12rem;
+      max-width: 100%;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      box-shadow: 0 0 0 30px white inset;
+    }
+
+    [data-fs-button] {
+      background-color: var(--fs-color-theme-2);
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .product-shipping-title {
+      display: block;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .product-shipping-title {
+    padding-top: 0.25rem;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--fs-color-text);
+  }
+
+  .product-shipping-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--fs-color-text);
+  }
+
+  button {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--fs-color-theme-0);
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+
+  [data-fs-product-shipping-options="true"] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px 0.25rem;
+    margin: 1rem 0;
+    border: 1px solid var(--fs-color-theme-0);
+    border-radius: 0.5rem;
+
+    [data-fs-radio-option] {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      align-items: center;
+
+      input {
+        height: 14px;
+        margin-right: 0.25rem;
+        accent-color: var(--fs-color-theme-1);
+      }
+    }
+
+    .shipping-option {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      span {
+        width: 100%;
+        padding: 0.25rem 0;
+        padding: 0;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        line-height: 28px;
+        color: var(--fs-color-text);
+      }
+
+      .shipping-name {
+        min-width: 150px;
+        max-width: 150px;
+        padding-right: 0.25rem;
+      }
+    }
+  }
+}

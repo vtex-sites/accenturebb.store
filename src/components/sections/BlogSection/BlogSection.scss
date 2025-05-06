@@ -1,0 +1,51 @@
+@import "src/styles/scaffold";
+
+.blogSection__container {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 424px;
+  padding: 0.5rem 0;
+
+  img {
+    padding-bottom: 1.5rem;
+    border-radius: 0.25rem;
+
+    @media (max-width: 920px) {
+      max-height: 226px;
+    }
+  }
+
+  .blogSection__primaryText {
+    padding-bottom: 0.75rem;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 24px;
+    color: #000000;
+    text-align: center;
+  }
+
+  .blogSection__secundaryText {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--fs-color-theme-5);
+    text-align: center;
+  }
+
+  .blogSection__button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: var(--fs-color-theme-3);
+    border: 0;
+    border-radius: 0.25rem;
+  }
+}

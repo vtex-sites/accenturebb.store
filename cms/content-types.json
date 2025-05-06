@@ -1,0 +1,181 @@
+[
+  {
+    "id": "categoryImage",
+    "name": "Category Image",
+    "configurationSchemaSets": []
+  },
+  {
+    "id": "headerLink",
+    "name": "Header Link",
+    "configurationSchemaSets": []
+  },
+  {
+    "id": "home",
+    "name": "Home Page",
+    "configurationSchemaSets": [
+      {
+        "name": "Settings",
+        "configurations": [
+          {
+            "name": "seo",
+            "schema": {
+              "title": "SEO",
+              "description": "Search Engine Optimization options",
+              "type": "object",
+              "widget": {
+                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+              },
+              "required": ["slug", "title", "description"],
+              "properties": {
+                "slug": {
+                  "title": "Path",
+                  "type": "string",
+                  "default": "/"
+                },
+                "title": {
+                  "title": "Default page title",
+                  "description": "Display this title when no other tile is available",
+                  "type": "string",
+                  "default": "FastStore"
+                },
+                "description": {
+                  "title": "Meta tag description",
+                  "type": "string",
+                  "default": "A beautifuly designed store"
+                },
+                "canonical": {
+                  "title": "Canonical url for the page",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pdp",
+    "name": "PDP",
+    "configurationSchemaSets": []
+  },
+  {
+    "id": "seo",
+    "name": "Global SEO Settings",
+    "configurationSchemaSets": [
+      {
+        "name": "SEO",
+        "configurations": [
+          {
+            "name": "siteMetadata",
+            "schema": {
+              "title": "Site Metadata",
+              "description": "Configure global site metadata",
+              "type": "object",
+              "widget": {
+                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+              },
+              "properties": {
+                "title": {
+                  "title": "Default page title",
+                  "description": "Display this title when no other tile is available",
+                  "type": "string",
+                  "default": "Store Theme | VTEX SFJ"
+                },
+                "description": {
+                  "title": "Meta tag description",
+                  "type": "string",
+                  "default": "A beautifully designed site for general VTEX stores"
+                },
+                "titleTemplate": {
+                  "title": "Title template to be used in category/product pages",
+                  "type": "string",
+                  "default": "%s | Store Theme"
+                }
+              }
+            }
+          },
+          {
+            "name": "facebook",
+            "schema": {
+              "title": "Facebook",
+              "description": "How your store is shared on Facebook",
+              "type": "object",
+              "required": ["thumbnail"],
+              "widget": {
+                "ui:ObjectFieldTemplate": "FacebookPreview"
+              },
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                  "description": "Store title in facebook",
+                  "default": "Marin Brasil Tramontina"
+                },
+                "thumbnail": {
+                  "type": "string",
+                  "title": "Thumbnail",
+                  "description": "Thumbnail to show in facebook when someone is sharing you store. The image must be bigger than 200px/200px",
+                  "widget": {
+                    "ui:widget": "image-uploader"
+                  }
+                },
+                "description": {
+                  "type": "string",
+                  "title": "Description",
+                  "description": "Site description when sharing on facebook",
+                  "default": "A beautifully designed site for general VTEX stores"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "institutionalPage",
+    "name": "Institutional page",
+    "configurationSchemaSets": [
+      {
+        "name": "SEO",
+        "configurations": [
+          {
+            "name": "siteMetadataWithSlug",
+            "schema": {
+              "title": "Site Metadata",
+              "description": "Configure global site metadata",
+              "type": "object",
+              "widget": {
+                "ui:ObjectFieldTemplate": "GoogleSeoPreview"
+              },
+              "properties": {
+                "title": {
+                  "title": "Default page title",
+                  "description": "Display this title when no other tile is available",
+                  "type": "string",
+                  "default": "Store Theme | VTEX SFJ"
+                },
+                "description": {
+                  "title": "Meta tag description",
+                  "type": "string",
+                  "default": "A beautifully designed site for general VTEX stores"
+                },
+                "titleTemplate": {
+                  "title": "Title template to be used in category/product pages",
+                  "type": "string",
+                  "default": "%s | Store Theme"
+                },
+                "slug": {
+                  "title": "URL Slug",
+                  "type": "string",
+                  "default": "/landing-page-url"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

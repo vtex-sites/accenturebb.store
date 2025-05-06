@@ -1,0 +1,32 @@
+@import "src/styles/scaffold";
+
+[data-fs-wishlist-menu-button] {
+  &[data-fs-link] {
+    padding: 0;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--fs-control-tap-size);
+    height: var(--fs-control-tap-size);
+    padding: var(--fs-spacing-0);
+    color: var(--fs-color-theme-0);
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: var(--fs-border-radius);
+
+    &:hover {
+      color: var(--fs-color-tertiary-text-color-hover);
+      background-color: var(--fs-color-tertiary-bkg-hover);
+      box-shadow: var(--fs-color-tertiary-shadow-hover);
+    }
+
+    &:active {
+      color: var(--fs-color-primary-bkg);
+      background-color: var(--fs-color-tertiary-bkg-active);
+    }
+  }
+}

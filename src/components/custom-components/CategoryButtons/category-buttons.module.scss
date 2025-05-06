@@ -1,0 +1,34 @@
+@import "src/styles/scaffold";
+
+.fs-category-buttons {
+  margin-bottom: var(--fs-spacing-5);
+
+  [data-fs-category-buttons-type-text] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    [data-fs-link] {
+      display: block;
+      height: fit-content;
+      padding: 10px var(--fs-spacing-3);
+      line-height: 14px;
+      text-decoration: none;
+      border: 1px solid var(--fs-border-color);
+      border-radius: var(--fs-border-radius-pill);
+
+      &:hover,
+      &:active {
+        color: #fff;
+        background-color: var(--fs-color-theme-0);
+      }
+    }
+  }
+
+  [data-fs-category-buttons-content] {
+    @include media("<notebook") {
+      padding-right: var(--fs-spacing-1);
+      padding-left: var(--fs-spacing-1);
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "src/styles/scaffold";
+
+.menu {
+  position: absolute;
+  top: 66px;
+  z-index: 1;
+  width: calc(100vw - 2 * var(--fs-grid-padding));
+  margin: 0 var(--fs-grid-padding);
+
+  @media (max-width: 920px) {
+    width: 80vw;
+    margin: 0;
+  }
+
+  &.open {
+    display: block;
+  }
+
+  &.closed {
+    display: none;
+  }
+
+  .arrow {
+    position: absolute;
+    top: -4px;
+    left: 8px;
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--fs-color-theme-1);
+    border-left: 10px solid transparent;
+
+    @media (max-width: 920px) {
+      left: 25px;
+    }
+  }
+}

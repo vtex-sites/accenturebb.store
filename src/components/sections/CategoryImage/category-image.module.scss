@@ -1,0 +1,27 @@
+@import "src/styles/scaffold";
+
+.fs-category-image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  [data-fs-category-image-content] {
+    [data-fs-link] {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        opacity: 0.75;
+      }
+
+      [data-fs-category-image-image] {
+        min-width: 94px;
+        border: 1px solid #8d8d8d;
+        border-radius: 50%;
+      }
+    }
+  }
+}

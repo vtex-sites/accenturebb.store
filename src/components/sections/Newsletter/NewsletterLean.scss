@@ -1,0 +1,70 @@
+@import "src/styles/scaffold";
+
+[data-fs-newsletter] {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+[data-fs-newsletter-form] {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.25rem 2rem;
+  background-color: #f2f2f2;
+
+  @media (max-width: 1279px) {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+[data-fs-newsletter-header] {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  color: var(--fs-color-theme-3);
+
+  @media (max-width: 1279px) {
+    padding-bottom: 1rem;
+  }
+}
+
+[data-fs-newsletter-controls] {
+  display: flex;
+  padding: 0 0.5rem;
+  background-color: #ffffff;
+  border: 4px solid var(--fs-color-theme-3);
+  border-radius: 0.5rem;
+
+  input {
+    width: 36vw;
+    height: 54px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--fs-color-theme-5);
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (max-width: 1279px) {
+      width: 63vw;
+    }
+  }
+
+  button {
+    height: 45px;
+    padding: 0.25rem 1rem;
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #fafafa;
+    background-color: var(--fs-color-theme-4);
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+}

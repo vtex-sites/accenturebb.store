@@ -1,0 +1,44 @@
+// Sections
+
+@import "src/components/sections/BrandSection/brand-section.scss";
+@import "src/components/sections/Section/section.scss";
+@import "src/components/sections/Banners/Banner.scss";
+@import "src/components/sections/BlogSection/BlogSection.scss";
+@import "src/components/sections/HeaderLink/HeaderLink.scss";
+@import "src/components/sections/ImageBanner/ImageBanner.scss";
+@import "src/components/sections/PromotionBanner/PromotionBanner.scss";
+@import "src/components/sections/Title/Title.scss";
+@import "src/components/sections/CategorySection/CategorySection.scss";
+
+// custom-components
+
+@import "src/components/custom-components/home/InfoCard/InfoCard.scss";
+@import "src/components/custom-components/home/SectionTitle/SectionTitle.scss";
+@import "src/components/custom-components/Price/Installment/Installment.scss";
+@import "src/components/custom-components/KeenSlider/keen-slider.scss";
+
+// UI
+
+@import "src/components/ui/SlideOver/overlay.scss";
+
+// Wishlist
+
+@import "src/components/Wishlist/WishListDetails/wishlist-details.scss";
+@import "src/components/Wishlist/WishListMenuButton/wishlist-menu-button.scss";
+@import "src/components/Wishlist/WishListPdpButton/wishlist-pdp-button.scss";
+
+// Footer
+
+@import "src/components/common/Footer/footerLean.scss";
+
+// Menu
+
+@import "src/components/menu/menu.scss";
+@import "src/components/menu/mobile/menu-mobile.scss";
+
+// Product Page
+
+@import "src/components/sections/ProductDetails/LinksAndDownloads/links-and-downloads.scss";
+@import "src/components/sections/ProductDetails/ProductShipping/product-shipping.scss";
+@import "src/components/sections/ProductDetails/ProductSpecifications/product-specifications.scss";
+@import "src/components/sections/ProductDetails/SoldBy/sold-by.scss";

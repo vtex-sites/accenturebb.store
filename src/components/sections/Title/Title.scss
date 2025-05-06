@@ -1,0 +1,10 @@
+.title {
+  padding-top: 24px;
+  padding-right: var(--fs-grid-padding);
+  padding-left: var(--fs-grid-padding);
+  margin-top: 24px;
+
+  &.section__other-background {
+    margin-top: 24px;
+  }
+}

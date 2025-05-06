@@ -1,0 +1,108 @@
+@import "src/styles/scaffold";
+
+[data-main-banner] {
+  position: relative;
+  display: block;
+  padding-bottom: 0;
+  margin-top: 0;
+
+  [data-banner-container] {
+    [data-banner-info] {
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 478px;
+      height: 100%;
+      margin-left: 10%;
+      font-family: var(--fs-text-face-body);
+      color: var(--color);
+
+      [data-banner-info-title] {
+        margin-bottom: 4px;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 40px;
+      }
+
+      [data-banner-info-sub-title] {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+
+      [data-banner-info-button] {
+        width: fit-content;
+        padding: 12px 20px;
+        margin-top: 28px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        line-height: 20px;
+        color: var(--color);
+        background-color: transparent;
+        border: 1px solid var(--color);
+        border-radius: 4px;
+        --fs-button-height: fit-content;
+      }
+
+      @media (max-width: 920px) {
+        justify-content: start;
+        max-width: 40%;
+        padding-top: 40px;
+
+        [data-banner-info-title] {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 32px;
+        }
+
+        [data-banner-info-button] {
+          padding: 4px 16px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  [data-banner-link] {
+    display: block;
+    padding: 0;
+  }
+
+  .arrow {
+    path {
+      stroke: var(--fs-color-neutral-0);
+    }
+
+    width: 48px;
+    height: 48px;
+  }
+
+  .arrow--right {
+    right: 32px;
+  }
+
+  .arrow--left {
+    left: 32px;
+  }
+
+  .arrow--disabled {
+    path {
+      stroke: var(--fs-color-theme-2);
+    }
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    padding: 0.25rem 0.5rem;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 16%);
+    transform: translate(-50%, -50%);
+  }
+}

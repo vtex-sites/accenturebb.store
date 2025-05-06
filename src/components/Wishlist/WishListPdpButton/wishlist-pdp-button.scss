@@ -1,0 +1,22 @@
+@import "src/styles/scaffold";
+
+[data-fs-wishlist-pdp-button] {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 5px 0 0;
+  color: var(--fs-color-theme-4);
+  cursor: pointer;
+  background-color: var(--fs-color-theme-2);
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  svg {
+    fill: white;
+  }
+}
