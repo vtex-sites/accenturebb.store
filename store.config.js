@@ -33,7 +33,7 @@ module.exports = {
   },
 
   // Production URLs
-  storeUrl: 'https://accenturebb.vtex.app',
+  storeUrl: 'https://leanvtex.vtex.app',
   secureSubdomain: 'https://accenturebb.vtexcommercestable.com.br',
   checkoutUrl: 'https://accenturebb.vtexcommercestable.com.br/checkout',
   loginUrl: 'https://accenturebb.vtexcommercestable.com.br/api/io/login',
